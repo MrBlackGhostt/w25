@@ -1,4 +1,4 @@
-import express from "Express";
+import express, { Request, Response } from "Express";
 import { client } from "@repo/db/client";
 const app = express();
 
@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   res.send("Sending the Get req");
 });
 
-app.post("/signup", async (req, res) => {
+app.post("/signup", async (req: Request, res: Response) => {
   const { username, password } = req.body;
   const user = await client.user.create({
     data: {
