@@ -15,7 +15,7 @@ server.on("connection", (socket) => {
       },
     })
     .then(() => console.log("User created"))
-    .catch((err) => console.error("DB Error:", err));
+    .catch((err: any) => console.error("DB Error:", err));
 
   socket.send("Connected to 3001");
 
