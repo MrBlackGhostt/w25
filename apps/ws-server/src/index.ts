@@ -6,11 +6,6 @@ const server = new WebSocketServer({ port: 3001 });
 server.on("connection", (socket) => {
   console.log("New client connected");
 
-  // Error handling
-  socket.on("error", (err) => {
-    console.error("WebSocket error:", err);
-  });
-
   // Save user to DB
   client.user
     .create({
