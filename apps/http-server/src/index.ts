@@ -1,4 +1,4 @@
-import express, { Request, Response } from "Express";
+import express, { Request, Response } from "express";
 import { client } from "@repo/db/client";
 const app = express();
 
